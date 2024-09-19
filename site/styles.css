@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #0b101d; /* Cor de fundo adicionada */
+    color: white; /* Para garantir que o texto seja legível */
+    padding-top: 80px; /* Espaço para o header fixo */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #10172b;
+    color: white;
+    position: fixed; /* Faz o header ficar fixo */
+    top: 0; /* Fixa no topo da página */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Largura total */
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+.logo img {
+    height: 50px; /* Ajuste conforme necessário */
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px; /* Adicionado para espaçamento */
+    transition: color 0.3s, background-color 0.3s; /* Transição suave */
+}
+
+nav a:hover {
+    color: #0d6efd; /* Cor do texto ao passar o mouse */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo leve ao passar o mouse */
+    border-radius: 5px; /* Arredondar os cantos */
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Para empurrar os inputs para a direita */
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.input-group i {
+    margin-right: 5px;
+    color: white;
+}
+
+.input-group input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 12px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0d6efd;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+button:hover {
+    background-color: #004cbe;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 400px; /* Aumentando a altura */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s;
+}
+
+.carousel img {
+    width: 100vw; /* Usar 100% da largura da viewport */
+    height: 400px; /* Manter altura fixa */
+    object-fit: cover; /* Para cobrir a área sem distorcer */
+}
+
+.games-header {
+    display: flex;
+    align-items: center;
+    margin: 20px; /* Margem para separar do carrossel */
+}
+
+.games-header i {
+    margin-right: 10px;
+    font-size: 24px; /* Tamanho do ícone */
+}
+
+.games {
+    display: grid; /* Usar grid para layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 20px; /* Espaçamento entre os jogos */
+    padding: 20px;
+}
+
+.game {
+    position: relative;
+    height: 150px; /* Altura fixa */
+    overflow: hidden;
+    border-radius: 10px; /* Arredondando as bordas do contêiner do jogo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adicionando sombra */
+}
+
+.game img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; /* Arredondando as bordas da imagem também */
+}
+
+.play-button {
+    position: absolute;
+    bottom: 10px; /* Distância da parte inferior */
+    left: 50%;
+    transform: translate(-50%, 0); /* Centraliza horizontalmente */
+    background: #0d6efd;
+    color: white;
+    padding: 12px 20px; /* Aumentar o tamanho do botão */
+    border-radius: 5px; /* Arredondar bordas do botão */
+    font-size: 18px; /* Aumentar tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.3s; /* Suavizar a transição */
+    width: auto; /* Largura automática */
+}
+
+.game:hover .play-button {
+    bottom: 10px; /* Mantém a posição ao passar o mouse */
+    opacity: 1; /* Torna visível ao passar o mouse */
+}
